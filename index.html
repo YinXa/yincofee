@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+  <title>YinPiCoffee</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+</head>
+<body>
+  <header>
+<nav class="navbar">
+  <div class="logo">Hi_Yinn</div>
+  
+  <!-- Tombol Hamburger -->
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
+
+  <!-- Menu Link -->
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#stores">Stores</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+  </header>
+
+<section id="home" class="hero" data-aos="fade-up">...</section>
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1>Dihaluskan Dengan Perasaan</h1>
+        <p>Kopi Bukan Sekadar Minuman, Tapi Cerita di Setiap Tegukan.</p>
+      </div>
+      <div class="hero-image">
+        <img src="assets/cup.png" alt="coffee cup"/>
+      </div>
+    </div>
+  </section>
+
+<section class="story" data-aos="fade-up">
+  <div class="story-container">
+    <div class="story-image">
+      <img src="assets/barista.jpg" alt="Barista at Work" />
+    </div>
+    <div class="story-content">
+      <div class="story-text">
+        <p>
+          Semua berawal dari secangkir kopi dan mimpi sederhana. Di tahun 2020, kami mulai meracik kopi dari dapur kecil rumah sendiri, hanya dengan alat seadanya dan niat yang besar. Awalnya cuma jualan ke teman-teman terdekat, tapi dari situ kami sadar jika kopi punya kekuatan untuk menyatukan cerita dan menciptakan kenangan.
+        </p>
+        <div class="extra-text" id="extra-text">
+          <p>
+            Dari dapur rumah, akhirnya kami bisa buka booth kecil di pinggir jalan. Panas, hujan, dan segala perjuangan dilalui sambil tetap meracik kopi terbaik untuk pelanggan.
+          </p>
+          <p>
+            Sekarang, kedai kecil kami jadi tempat nongkrong favorit banyak orang. Bukan cuma karena kopinya, tapi juga karena suasananya. Tempat di mana kamu bisa cerita, kerja, atau sekadar menikmati waktu dengan segelas kopi yang diracik dengan hati.
+          </p>
+        </div>
+        <button class="read-more-btn" onclick="toggleStory()">Read More →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section id="menu" class="about">
+    <h2>Our Menu</h2>
+  <p>Espresso, Latte, Cappuccino, Matcha, and many more! Freshly brewed with love.</p>
+  <div class="menu-gallery">
+    <div class="menu-item">
+      <img src="assets/espresso.png" alt="Espresso">
+      <h3>Espresso</h3>
+    </div>
+    <div class="menu-item">
+      <img src="assets/latte.png" alt="Latte">
+      <h3>Latte</h3>
+    </div>
+    <div class="menu-item">
+      <img src="assets/cappucino.png" alt="Cappuccino">
+      <h3>Cappuccino</h3>
+    </div>
+    <div class="menu-item">
+      <img src="assets/matcha.png" alt="Matcha Latte">
+      <h3>Matcha Latte</h3>
+    </div>
+  </div>
+</section>
+
+<section id="stores" class="about">
+  <h2>Lokasi Toko Kami</h2>
+  <p>Datang dan rasakan sendiri aroma kopi kami langsung dari sumbernya ☕</p>
+  <div class="map-container" style="margin-top: 2rem;">
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d352.51316476614653!2d103.59251088092941!3d-1.6161512741307718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e25888bda00f9a9%3A0xf31d2243e1bce25c!2sUniversitas%20Nurdin%20Hamzah!5e0!3m2!1sid!2sid!4v1747087766799!5m2!1sid!2sid"
+  width="600"
+  height="450"
+  style="border:0;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+  </div>
+</section>
+
+
+<section id="contact" class="about">
+  <div class="contact-wrapper">
+    <h2>Hubungi Kami</h2>
+    <form id="contact-form">
+      <label for="name">Nama</label>
+      <input type="text" id="name" name="name" placeholder="Masukkan nama kamu" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Masukkan email kamu" required>
+
+      <label for="message">Pesan</label>
+      <textarea id="message" name="message" placeholder="Tulis pesan kamu di sini..." required></textarea>
+
+      <button type="submit">Kirim</button>
+    </form>
+  </div>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 YinPiCoffe</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="contact.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
+  <script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+
+  // Optional: Tutup menu pas link diklik
+  navLinks.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') {
+      navLinks.classList.remove('show');
+    }
+  });
+</script>
+<script>
+  function toggleStory() {
+    const extraText = document.getElementById("extra-text");
+    const btn = document.querySelector(".read-more-btn");
+
+    if (extraText.style.display === "none") {
+      extraText.style.display = "block";
+      extraText.classList.add("show");
+      btn.textContent = "Read Less ←";
+    } else {
+      extraText.style.display = "none";
+      extraText.classList.remove("show");
+      btn.textContent = "Read More →";
+    }
+  }
+</script>
+
+
+</body>
+</html>
